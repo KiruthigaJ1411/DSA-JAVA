@@ -32,8 +32,8 @@ Welcome to my DSA practice repository! This repo contains my structured preparat
 - ⬜ Math & Miscellaneous
 
 ---
-
-## 🛠️ Tech Stack
+🚀 Let's Connect
+Feel free to reach out if you want to collaborate or discuss solutions!
 
 - Language: **Java**
 - IDE: IntelliJ / Eclipse
