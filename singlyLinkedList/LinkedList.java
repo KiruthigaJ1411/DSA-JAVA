@@ -147,6 +147,65 @@ public class LinkedList {
         return true;
     }
 
+    public boolean insert(int index, int value){
+        
+        if(index<0 || index>length) return false;
+        
+        if(index ==0) {
+            prepend(value);
+        } else if(index == length) {
+            append(value);
+        } else{
+            Node previous = get(index-1);
+        Node newNode = new Node(value);
+        newNode.next = previous.next ;
+        previous.next = newNode ;
+        
+        length++;
+        }
+        
+        return true;
+    }
+
+    public Node remove(int index){
+        
+        Node temp = null ;
+        
+        if(index < 0 || index > length){
+            return null;
+        } else if (index ==0){
+            temp = removeFirst();
+        } else if (index == length) {
+            return removeLast();
+        } else {
+            Node previous = get(index-1);
+            temp = previous.next;
+            previous.next = temp.next;
+            temp.next = null;
+        
+        }
+        length--;
+        return temp;
+        
+    }
+
+    public void reverse(){
+        Node previous = null ;
+        Node currentNode = head ;
+        Node nextNode = null;
+        
+        head = tail ;
+        tail = currentNode;
+        
+        for(int i=0; i<length ; i++){
+           nextNode = currentNode.next ;
+           currentNode.next = previous ;
+           previous = currentNode;
+           currentNode = nextNode ;
+           
+        }
+    }
+
 
 }
 
